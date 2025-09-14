@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "menu content"
+        "footer  footer";
+      grid-template-columns: 1fr 3fr;
+      gap: 5px;
+      background-color: #4f967e;
+      padding: 10px;
+    }
+
+    .container > div {
+      background-color: #fff;
+      /* padding: 5px; */
+    }
+
+    .container > div.header {
+      grid-area: header;
+      text-align: center;
+    }
+
+    .container > div.menu {
+      grid-area: menu;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .container > div.content {
+      grid-area: content;
+      text-align: center;
+    }
+    .container > div.footer {
+      grid-area: footer;
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="header"><h1>header</h1></div>
+      <div class="menu">
+        <a href="#">link 1</a><br />
+        <a href="#">link 2</a><br />
+        <a href="#">link 3</a>
+      </div>
+
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil,
+        quae temporibus deleniti fugit harum nostrum possimus dolorem distinctio
+        voluptas! Explicabo nobis odio doloremque quam corrupti enim laborum
+        ratione ex?
+      </div>
+      <div class="footer"><h2>Footer</h2></div>
+    </div>
+  </body>
+</html>
